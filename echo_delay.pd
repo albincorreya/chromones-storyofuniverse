@@ -1,0 +1,28 @@
+#N canvas 78 23 547 426 10;
+#X obj 165 309 delwrite~ \$0-delay 3000;
+#X obj 185 178 delread~ \$0-delay;
+#X floatatom 186 144 5 0 3000 0 - - -;
+#X obj 94 147 *~;
+#X obj 75 236 +~;
+#X obj 332 164 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 342 142 Feedback ( 0 - 1 );
+#X obj 311 209 *~;
+#X obj 98 67 inlet~;
+#X obj 187 117 inlet;
+#X obj 328 97 inlet;
+#X obj 74 310 outlet~;
+#X text 200 28 echo_delay;
+#X obj 328 118 clip 0 1;
+#X connect 1 0 4 1;
+#X connect 1 0 7 0;
+#X connect 2 0 1 0;
+#X connect 3 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 11 0;
+#X connect 5 0 7 1;
+#X connect 7 0 0 0;
+#X connect 8 0 3 0;
+#X connect 9 0 2 0;
+#X connect 10 0 13 0;
+#X connect 13 0 5 0;
